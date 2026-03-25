@@ -1,26 +1,53 @@
 @import "tailwindcss";
 
-:root {
-  --background: #ffffff;
-  --foreground: #171717;
+@theme {
+  --font-serif: var(--font-playfair), ui-serif, Georgia, Cambria, "Times New Roman", Times, serif;
+  --font-sans: var(--font-inter), ui-sans-serif, system-ui, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  
+  /* Primary Palette */
+  --color-pathway-blue: #009ed9;
+  --color-white: #ffffff;
+  --color-medium-teal: #004f68;
+  --color-dark-teal: #00394a;
+  
+  /* Secondary Palette - Deep */
+  --color-deep-beige: #D9C9B1;
+  --color-deep-khaki: #E0E0BB;
+  --color-deep-slate: #C3D9D6;
+  --color-plant-green: #35665F;
+  
+  /* Secondary Palette - Medium */
+  --color-medium-beige: #E9E0D2;
+  --color-medium-khaki: #F0F0DE;
+  --color-medium-slate: #E1E8E7;
+  
+  /* Secondary Palette - Light */
+  --color-light-beige: #F7F5F2;
+  --color-light-khaki: #FAFAF5;
+  --color-light-slate: #F5FAF9;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+/* Global Styles */
+html, body {
+  overflow: auto !important;
+  overflow-y: auto !important;
+  height: auto !important;
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background-color: var(--color-dark-teal);
+  color: var(--color-white);
+}
+
+::selection {
+  background-color: var(--color-pathway-blue);
+  color: var(--color-white);
+}
+
+/* Custom dotted line specifically matching 1:1:5 ratio (Size: Dash: Gap) */
+.journey-line-dotted {
+  background-image: linear-gradient(to bottom, white 16.7%, transparent 16.7%);
+  background-size: 2px 12px;
+  background-repeat: repeat-y;
+  background-position: center;
 }
