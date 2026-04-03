@@ -1,11 +1,16 @@
 "use client";
 
 import { useState } from 'react';
+import { useLeadForm } from './LeadFormContext';
+
+// PENDING BUSINESS DECISION: Minimum credit score threshold is under internal review.
+// Update this single value when the final number is confirmed.
+const MIN_CREDIT_SCORE = 600;
 
 const FAQS = [
   {
     q: "What do I need to qualify?",
-    a: "Stable income and rental history. We consider credit scores from 580 and provide complete coaching to get you mortgage-ready."
+    a: `Stable income and rental history. We consider credit scores from ${MIN_CREDIT_SCORE} and provide complete coaching to get you mortgage-ready.`
   },
   {
     q: "How is this different from traditional rent to own?",
@@ -31,6 +36,7 @@ const FAQS = [
 
 export default function FAQAndForm() {
   const [openIndex, setOpenIndex] = useState<number | null>(0);
+  const { openForm } = useLeadForm();
 
   return (
     <div className="bg-dark-teal w-full text-white py-20 font-sans border-t border-medium-teal/30">
@@ -66,12 +72,18 @@ export default function FAQAndForm() {
         </div>
 
         <div className="mt-12 flex flex-col sm:flex-row items-center gap-6">
-          <button className="bg-pathway-blue text-white px-8 py-4 rounded-[25px] font-medium hover:bg-pathway-blue/80 shadow-[0_0_20px_rgba(0,158,217,0.3)] transition-all">
+          <button
+            onClick={() => openForm("homepage", "faq_browse_homes")}
+            className="bg-pathway-blue text-white px-8 py-4 rounded-[25px] font-medium hover:bg-pathway-blue/80 shadow-[0_0_20px_rgba(0,158,217,0.3)] transition-all"
+          >
             Ready to go? Browse Homes
           </button>
-          <span className="text-white/60 uppercase tracking-widest text-xs font-bold hover:text-white cursor-pointer transition-colors">
+          <button
+            onClick={() => openForm("homepage", "faq_schedule_call")}
+            className="text-white/60 uppercase tracking-widest text-xs font-bold hover:text-white cursor-pointer transition-colors"
+          >
             Still have questions? Schedule a call.
-          </span>
+          </button>
         </div>
       </section>
 
@@ -120,43 +132,15 @@ export default function FAQAndForm() {
         </div>
       </section>
 
-      {/* SECTION 12 & 13: FINAL CTA & FOOTER */}
-      <footer className="max-w-7xl mx-auto px-6 pt-24 pb-12 text-center">
-        <div className="mb-24">
-          <h2 className="text-5xl md:text-7xl font-serif font-bold tracking-tighter mb-6">Your future home is <span className="italic text-pathway-blue">waiting.</span></h2>
-          <p className="text-xl md:text-2xl text-white/70 font-light mb-10">Browse homes, get pre-qualified, or talk to our team. No commitment.</p>
-          <div className="flex flex-col sm:flex-row justify-center gap-6 items-center">
-            <button className="w-full sm:w-auto bg-pathway-blue text-white px-10 py-5 rounded-[25px] font-medium hover:bg-pathway-blue/80 transition-all text-lg shadow-[0_0_30px_rgba(0,158,217,0.3)] hover:-translate-y-1">
-              Browse Available Homes
-            </button>
-            <button className="w-full sm:w-auto bg-transparent border border-medium-teal text-white px-10 py-5 rounded-[25px] font-medium hover:bg-medium-teal/40 transition-all text-lg backdrop-blur-sm hover:-translate-y-1">
-              Start Your Application
-            </button>
-          </div>
-        </div>
+      <div className="text-center py-10">
+        <button
+          onClick={() => openForm("homepage", "market_browse_homes")}
+          className="text-white/60 uppercase tracking-widest text-xs font-bold hover:text-white cursor-pointer transition-colors"
+        >
+          Already in our area? Browse homes now →
+        </button>
+      </div>
 
-        <div className="border-t border-medium-teal/40 w-full pt-12 flex flex-col md:flex-row justify-between items-center text-left gap-8 pb-10">
-          <div className="text-3xl font-serif font-bold tracking-tight text-white mb-4 md:mb-0">
-            Pathway<span className="text-pathway-blue">.</span>
-          </div>
-          
-          <div className="flex flex-wrap justify-center gap-6 text-sm text-white/60">
-            <span className="hover:text-white cursor-pointer transition-colors">How It Works</span>
-            <span className="hover:text-white cursor-pointer transition-colors">Available Homes</span>
-            <span className="hover:text-white cursor-pointer transition-colors">Financial Assistance</span>
-            <span className="hover:text-white cursor-pointer transition-colors">FAQ</span>
-            <span className="hover:text-white cursor-pointer transition-colors">About Pathway</span>
-          </div>
-        </div>
-        
-        <div className="border-t border-medium-teal/20 w-full pt-8 flex flex-col md:flex-row justify-between items-center gap-4 text-xs text-white/40">
-          <p>© 2026 Pathway Homes. All rights reserved. Equal Housing Opportunity.</p>
-          <div className="flex gap-4">
-            <span className="hover:text-white cursor-pointer transition-colors">Privacy Policy</span>
-            <span className="hover:text-white cursor-pointer transition-colors">Terms of Service</span>
-          </div>
-        </div>
-      </footer>
     </div>
   );
 }

@@ -27,11 +27,10 @@
   --color-light-slate: #F5FAF9;
 }
 
-/* Global Styles */
+/* Global Styles — overflow override prevents GSAP ScrollTrigger's fixed pin from locking body scroll */
 html, body {
   overflow: auto !important;
   overflow-y: auto !important;
-  height: auto !important;
 }
 
 body {
@@ -51,3 +50,33 @@ body {
   background-repeat: repeat-y;
   background-position: center;
 }
+
+/* Visually hidden but accessible to screen readers */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border-width: 0;
+}
+
+/* Lead form modal entrance animation */
+@keyframes modal-in {
+  from {
+    opacity: 0;
+    transform: translateY(16px) scale(0.97);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+.animate-modal-in {
+  animation: modal-in 0.3s ease-out both;
+}
+
