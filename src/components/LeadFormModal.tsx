@@ -382,7 +382,7 @@ export default function LeadFormModal() {
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               <div>
-                <label className={labelClass}>Do you intend to purchase in the next 5 years?*</label>
+                <label className={labelClass}>Do you intend to purchase in the next 3 years?*</label>
                 <SelectWrapper>
                   <select className={selectClass} value={form.purchaseIntent} onChange={e => updateField('purchaseIntent', e.target.value)} onBlur={() => handleBlur('purchaseIntent')}>
                     <option value="" disabled>Select</option>
