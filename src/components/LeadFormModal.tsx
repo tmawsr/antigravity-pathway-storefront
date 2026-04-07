@@ -45,16 +45,17 @@ const REFERRAL_SOURCES = [
 const PURCHASE_INTENT_OPTIONS = ["Yes", "No"] as const;
 
 const PURCHASE_TIMELINE_OPTIONS = [
-  "Within 6 months",
-  "6–12 months",
-  "1–2 years",
-  "2–5 years",
+  "Next 12 Months",
+  "Next 1–2 Years",
+  "Next 3+ Years",
+  "I'm Not Sure",
 ] as const;
 
 const MOVE_TIMEFRAME_OPTIONS = [
-  "Next 3 months",
-  "3–12 months",
-  "Unsure",
+  "Next 3 Months",
+  "3–6 Months",
+  "6–12 Months",
+  "I'm Flexible",
 ] as const;
 
 const TCPA_CONSENT_VERSION = "v1";
@@ -291,7 +292,7 @@ export default function LeadFormModal() {
   // ─── Confirmation State ───
   if (submitted) {
     return (
-      <div className="fixed inset-0 z-[9999] flex items-center justify-center p-4" onClick={closeForm}>
+      <div className="fixed inset-0 z-[9999] flex items-start justify-center p-4 pt-24 md:pt-48" onClick={closeForm}>
         <div className="absolute inset-0 bg-black/70 backdrop-blur-sm" />
         <div className="relative bg-[#00394a]/95 backdrop-blur-xl border border-medium-teal/30 rounded-[30px] p-10 md:p-14 max-w-lg w-full text-center shadow-2xl animate-modal-in" onClick={e => e.stopPropagation()}>
           <div className="w-16 h-16 mx-auto mb-6 rounded-full bg-pathway-blue/20 flex items-center justify-center">
@@ -309,11 +310,11 @@ export default function LeadFormModal() {
 
   // ─── Form ───
   return (
-    <div className="fixed inset-0 z-[9999] flex items-center justify-center p-4" onClick={closeForm}>
+    <div className="fixed inset-0 z-[9999] flex items-start justify-center p-4 pt-24 md:pt-48" onClick={closeForm}>
       <div className="absolute inset-0 bg-black/70 backdrop-blur-sm" />
       <div
         ref={modalRef}
-        className="relative bg-[#00394a]/95 backdrop-blur-xl border border-medium-teal/30 rounded-[30px] p-6 md:p-10 max-w-2xl w-full shadow-2xl max-h-[90dvh] overflow-y-auto animate-modal-in"
+        className="relative bg-[#00394a]/95 backdrop-blur-xl border border-medium-teal/30 rounded-[30px] p-6 md:p-10 max-w-2xl w-full shadow-2xl max-h-[calc(100dvh-7rem)] md:max-h-[calc(100dvh-13rem)] overflow-y-auto animate-modal-in"
         onClick={e => e.stopPropagation()}
       >
         {/* Close button */}
