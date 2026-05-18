@@ -218,7 +218,7 @@ export default function Walkthrough() {
         
         {/* 1. HERO */}
         <div ref={heroRef} className="absolute inset-x-0 w-full flex flex-col justify-center max-w-7xl mx-auto px-6 md:px-16 lg:px-32 drop-shadow-2xl">
-          <h1 className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-serif font-bold tracking-tighter text-white mb-4 md:mb-6">
+          <h1 className="text-6xl sm:text-7xl md:text-8xl lg:text-9xl font-sans font-bold tracking-tighter text-white mb-4 md:mb-6">
             Rent to Own, <br /> <span className="italic text-pathway-blue">Reimagined.</span>
           </h1>
           <p className="mb-3 md:mb-4 max-w-4xl text-xl sm:text-2xl md:text-3xl font-light text-white/95 leading-tight">
