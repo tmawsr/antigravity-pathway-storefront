@@ -243,11 +243,11 @@ export default function Walkthrough() {
         <div ref={compareRef} className="absolute inset-x-0 w-full flex flex-col items-center justify-center max-w-7xl mx-auto px-4 md:px-16 lg:px-32 opacity-0 invisible drop-shadow-2xl">
           <div className="w-full bg-[#00394a]/90 backdrop-blur-xl border border-medium-teal/30 rounded-2xl md:rounded-[40px] p-5 md:p-10 lg:p-14 pointer-events-auto shadow-2xl max-h-[85dvh] overflow-y-auto">
             <div className="anim-compare text-pathway-blue font-bold tracking-widest uppercase text-xs md:text-sm mb-2 md:mb-4">An Upgraded Program</div>
-            <h2 className="anim-compare text-2xl sm:text-3xl md:text-5xl font-serif font-bold mb-6 md:mb-10 text-white">Forget what you've heard about <br/><span className="italic text-pathway-blue">rent to own.</span></h2>
+            <h2 className="anim-compare text-2xl sm:text-3xl md:text-5xl font-sans font-bold mb-6 md:mb-10 text-white">Forget what you've heard about <br/><span className="italic text-pathway-blue">rent to own.</span></h2>
 
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4 md:gap-8">
               <div className="anim-compare bg-white/5 border border-white/10 rounded-xl md:rounded-[25px] p-4 md:p-8">
-                <h3 className="text-base md:text-xl font-serif text-white/50 mb-3 md:mb-6 border-b border-white/10 pb-3 md:pb-4">Traditional Wait-to-Buy</h3>
+                <h3 className="text-base md:text-xl font-sans text-white/50 mb-3 md:mb-6 border-b border-white/10 pb-3 md:pb-4">Traditional Wait-to-Buy</h3>
                 <ul className="space-y-2 md:space-y-4">
                   <li className="flex gap-3"><span className="text-red-500 font-bold" aria-hidden="true">✗</span><span className="sr-only">Not included:</span><span className="text-white/70 text-sm md:text-base">Large non-refundable upfront fee</span></li>
                   <li className="flex gap-3"><span className="text-red-500 font-bold" aria-hidden="true">✗</span><span className="sr-only">Not included:</span><span className="text-white/70 text-sm md:text-base">Inflated above-market rent</span></li>
@@ -255,7 +255,7 @@ export default function Walkthrough() {
                 </ul>
               </div>
               <div className="anim-compare bg-[#00394a] border border-pathway-blue rounded-xl md:rounded-[25px] p-4 md:p-8 relative overflow-hidden shadow-[0_0_30px_rgba(0,158,217,0.15)]">
-                <h3 className="text-base md:text-xl font-serif text-white mb-3 md:mb-6 border-b border-pathway-blue/30 pb-3 md:pb-4">Pathway</h3>
+                <h3 className="text-base md:text-xl font-sans text-white mb-3 md:mb-6 border-b border-pathway-blue/30 pb-3 md:pb-4">Pathway</h3>
                 <ul className="space-y-2 md:space-y-4 relative z-10">
                   <li className="flex gap-3"><span className="text-pathway-blue font-bold" aria-hidden="true">✓</span><span className="sr-only">Included:</span><span className="text-white font-medium text-sm md:text-base">No large upfront payments</span></li>
                   <li className="flex gap-3"><span className="text-pathway-blue font-bold" aria-hidden="true">✓</span><span className="sr-only">Included:</span><span className="text-white font-medium text-sm md:text-base">Market-rate rent, no premiums</span></li>
@@ -279,35 +279,35 @@ export default function Walkthrough() {
         <div ref={journeyRef} className="absolute inset-x-0 w-full flex flex-col items-center justify-center max-w-7xl mx-auto px-4 md:px-16 lg:px-24 opacity-0 invisible drop-shadow-2xl">
           <div className="w-full bg-[#00394a]/90 backdrop-blur-xl border border-medium-teal/30 rounded-2xl md:rounded-[40px] p-5 md:p-10 lg:p-14 pointer-events-auto text-center shadow-2xl max-h-[85dvh] overflow-y-auto">
             <div className="anim-journey text-pathway-blue font-bold tracking-widest uppercase text-xs md:text-sm mb-2 md:mb-4">Your Journey</div>
-            <h2 className="anim-journey text-2xl sm:text-3xl md:text-5xl font-serif font-bold text-white mb-6 md:mb-10">From renter to homeowner in <span className="italic text-pathway-blue">4 steps.</span></h2>
+            <h2 className="anim-journey text-2xl sm:text-3xl md:text-5xl font-sans font-bold text-white mb-6 md:mb-10">From renter to homeowner in <span className="italic text-pathway-blue">4 steps.</span></h2>
             
             <div className="grid grid-cols-2 lg:grid-cols-4 gap-3 md:gap-6 text-left">
               <div className="anim-journey bg-white/5 border border-medium-teal/30 rounded-xl md:rounded-[25px] p-3 md:p-6">
                 <div className="w-9 h-9 md:w-12 md:h-12 rounded-full bg-pathway-blue/10 border border-pathway-blue/20 flex items-center justify-center mx-auto mb-3 md:mb-4 shadow-[0_0_12px_rgba(0,158,217,0.15)]">
                   <svg className="w-4 h-4 md:w-5 md:h-5 text-pathway-blue" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}><path strokeLinecap="round" strokeLinejoin="round" d="M2.25 12l8.954-8.955a1.126 1.126 0 011.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75M8.25 21h8.25" /></svg>
                 </div>
-                <h3 className="text-sm md:text-xl font-serif mb-2 md:mb-3 text-pathway-blue">1. Find Your Home</h3>
+                <h3 className="text-sm md:text-xl font-sans mb-2 md:mb-3 text-pathway-blue">1. Find Your Home</h3>
                 <p className="text-white/80 text-xs md:text-sm leading-relaxed">Browse inventory and move in. Zero bidding wars.</p>
               </div>
               <div className="anim-journey bg-white/5 border border-medium-teal/30 rounded-xl md:rounded-[25px] p-3 md:p-6">
                 <div className="w-9 h-9 md:w-12 md:h-12 rounded-full bg-pathway-blue/10 border border-pathway-blue/20 flex items-center justify-center mx-auto mb-3 md:mb-4 shadow-[0_0_12px_rgba(0,158,217,0.15)]">
                   <svg className="w-4 h-4 md:w-5 md:h-5 text-pathway-blue" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}><path strokeLinecap="round" strokeLinejoin="round" d="M2.25 18L9 11.25l4.306 4.307a11.95 11.95 0 015.814-5.519l2.74-1.22m0 0l-5.94-2.28m5.94 2.28l-2.28 5.941" /></svg>
                 </div>
-                <h3 className="text-sm md:text-xl font-serif mb-2 md:mb-3 text-pathway-blue">2. Get Mortgage Ready</h3>
+                <h3 className="text-sm md:text-xl font-sans mb-2 md:mb-3 text-pathway-blue">2. Get Mortgage Ready</h3>
                 <p className="text-white/80 text-xs md:text-sm leading-relaxed">On-time rent builds credit through automatic reporting to all three bureaus while coaching gets you mortgage-qualified.</p>
               </div>
               <div className="anim-journey bg-white/5 border border-medium-teal/30 rounded-xl md:rounded-[25px] p-3 md:p-6">
                 <div className="w-9 h-9 md:w-12 md:h-12 rounded-full bg-pathway-blue/10 border border-pathway-blue/20 flex items-center justify-center mx-auto mb-3 md:mb-4 shadow-[0_0_12px_rgba(0,158,217,0.15)]">
                   <svg className="w-4 h-4 md:w-5 md:h-5 text-pathway-blue" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}><path strokeLinecap="round" strokeLinejoin="round" d="M15 19.128a9.38 9.38 0 002.625.372 9.337 9.337 0 004.121-.952 4.125 4.125 0 00-7.533-2.493M15 19.128v-.003c0-1.113-.285-2.16-.786-3.07M15 19.128v.106A12.318 12.318 0 018.624 21c-2.331 0-4.512-.645-6.374-1.766l-.001-.109a6.375 6.375 0 0111.964-3.07M12 6.375a3.375 3.375 0 11-6.75 0 3.375 3.375 0 016.75 0zm8.25 2.25a2.625 2.625 0 11-5.25 0 2.625 2.625 0 015.25 0z" /></svg>
                 </div>
-                <h3 className="text-sm md:text-xl font-serif mb-2 md:mb-3 text-pathway-blue">3. Get Supported</h3>
+                <h3 className="text-sm md:text-xl font-sans mb-2 md:mb-3 text-pathway-blue">3. Get Supported</h3>
                 <p className="text-white/80 text-xs md:text-sm leading-relaxed">Personalized coaching keeps milestones on track.</p>
               </div>
               <div className="anim-journey bg-white/5 border border-medium-teal/30 rounded-xl md:rounded-[25px] p-3 md:p-6">
                 <div className="w-9 h-9 md:w-12 md:h-12 rounded-full bg-pathway-blue/10 border border-pathway-blue/20 flex items-center justify-center mx-auto mb-3 md:mb-4 shadow-[0_0_12px_rgba(0,158,217,0.15)]">
                   <svg className="w-4 h-4 md:w-5 md:h-5 text-pathway-blue" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}><path strokeLinecap="round" strokeLinejoin="round" d="M15.75 5.25a3 3 0 013 3m3 0a6 6 0 01-7.029 5.912c-.563-.097-1.159.026-1.563.43L10.5 17.25H8.25v2.25H6v2.25H2.25v-2.818c0-.597.237-1.17.659-1.591l6.499-6.499c.404-.404.527-1 .43-1.563A6 6 0 1121.75 8.25z" /></svg>
                 </div>
-                <h3 className="text-sm md:text-xl font-serif mb-2 md:mb-3 text-pathway-blue">4. Buy When Ready</h3>
+                <h3 className="text-sm md:text-xl font-sans mb-2 md:mb-3 text-pathway-blue">4. Buy When Ready</h3>
                 <p className="text-white/80 text-xs md:text-sm leading-relaxed">Purchase with up to $12,000+* in assistance.</p>
               </div>
             </div>
@@ -328,28 +328,28 @@ export default function Walkthrough() {
           <div className="bg-[#00394a]/90 backdrop-blur-xl border border-medium-teal/30 rounded-2xl md:rounded-[40px] p-5 md:p-10 lg:p-14 w-full pointer-events-auto shadow-2xl max-h-[85dvh] overflow-y-auto">
             <div className="anim-finance text-center mb-6 md:mb-10">
               <div className="text-pathway-blue font-bold tracking-widest uppercase text-xs md:text-sm mb-2 md:mb-4">Financial Help</div>
-              <h2 className="text-2xl sm:text-3xl md:text-5xl font-serif font-bold text-white">Up to <span className="italic text-pathway-blue">$12,000+</span> to help you buy.</h2>
+              <h2 className="text-2xl sm:text-3xl md:text-5xl font-sans font-bold text-white">Up to <span className="italic text-pathway-blue">$12,000+</span> to help you buy.</h2>
             </div>
             <div className="grid grid-cols-1 md:grid-cols-3 gap-4 md:gap-6">
               <div className="anim-finance bg-white/5 border border-medium-teal/30 rounded-xl md:rounded-[25px] p-4 md:p-8 text-center hover:border-pathway-blue transition-colors">
                 <div className="w-12 h-12 md:w-14 md:h-14 rounded-full bg-pathway-blue/10 border border-pathway-blue/20 flex items-center justify-center mx-auto mb-4 md:mb-5 shadow-[0_0_16px_rgba(0,158,217,0.15)]">
                   <svg className="w-5 h-5 md:w-6 md:h-6 text-pathway-blue" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}><path strokeLinecap="round" strokeLinejoin="round" d="M2.25 18.75a60.07 60.07 0 0115.797 2.101c.727.198 1.453-.342 1.453-1.096V18.75M3.75 4.5v.75A.75.75 0 013 6h-.75m0 0v-.375c0-.621.504-1.125 1.125-1.125H20.25M2.25 6v9m18-10.5v.75c0 .414.336.75.75.75h.75m-1.5-1.5h.375c.621 0 1.125.504 1.125 1.125v9.75c0 .621-.504 1.125-1.125 1.125h-.375m1.5-1.5H21a.75.75 0 00-.75.75v.75m0 0H3.75m0 0h-.375a1.125 1.125 0 01-1.125-1.125V15m1.5 1.5v-.75A.75.75 0 003 15h-.75M15 10.5a3 3 0 11-6 0 3 3 0 016 0zm3 0h.008v.008H18V10.5zm-12 0h.008v.008H6V10.5z" /></svg>
                 </div>
-                <h3 className="text-xl md:text-2xl font-serif text-white mb-2 md:mb-3">3% Assistance</h3>
+                <h3 className="text-xl md:text-2xl font-sans text-white mb-2 md:mb-3">3% Assistance</h3>
                 <p className="text-white/70 text-xs md:text-sm leading-relaxed">On a $400k home, that's $12k toward your down payment—fronted by Pathway.</p>
               </div>
               <div className="anim-finance bg-white/5 border border-medium-teal/30 rounded-xl md:rounded-[25px] p-4 md:p-8 text-center hover:border-pathway-blue transition-colors">
                 <div className="w-12 h-12 md:w-14 md:h-14 rounded-full bg-pathway-blue/10 border border-pathway-blue/20 flex items-center justify-center mx-auto mb-4 md:mb-5 shadow-[0_0_16px_rgba(0,158,217,0.15)]">
                   <svg className="w-5 h-5 md:w-6 md:h-6 text-pathway-blue" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}><path strokeLinecap="round" strokeLinejoin="round" d="M3 13.125C3 12.504 3.504 12 4.125 12h2.25c.621 0 1.125.504 1.125 1.125v6.75C7.5 20.496 6.996 21 6.375 21h-2.25A1.125 1.125 0 013 19.875v-6.75zM9.75 8.625c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125v11.25c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V8.625zM16.5 4.125c0-.621.504-1.125 1.125-1.125h2.25C20.496 3 21 3.504 21 4.125v15.75c0 .621-.504 1.125-1.125 1.125h-2.25a1.125 1.125 0 01-1.125-1.125V4.125z" /></svg>
                 </div>
-                <h3 className="text-xl md:text-2xl font-serif text-white mb-2 md:mb-3">Credit Reporting</h3>
+                <h3 className="text-xl md:text-2xl font-sans text-white mb-2 md:mb-3">Credit Reporting</h3>
                 <p className="text-white/70 text-xs md:text-sm leading-relaxed">Every on-time rent payment is reported to all three bureaus, actively building your credit score.</p>
               </div>
               <div className="anim-finance bg-white/5 border border-medium-teal/30 rounded-xl md:rounded-[25px] p-4 md:p-8 text-center hover:border-pathway-blue transition-colors">
                 <div className="w-12 h-12 md:w-14 md:h-14 rounded-full bg-pathway-blue/10 border border-pathway-blue/20 flex items-center justify-center mx-auto mb-4 md:mb-5 shadow-[0_0_16px_rgba(0,158,217,0.15)]">
                   <svg className="w-5 h-5 md:w-6 md:h-6 text-pathway-blue" fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={1.5}><path strokeLinecap="round" strokeLinejoin="round" d="M20.25 8.511c.884.284 1.5 1.128 1.5 2.097v4.286c0 1.136-.847 2.1-1.98 2.193-.34.027-.68.052-1.02.072v3.091l-3-3c-1.354 0-2.694-.055-4.02-.163a2.115 2.115 0 01-.825-.242m9.345-8.334a2.126 2.126 0 00-.476-.095 48.64 48.64 0 00-8.048 0c-1.131.094-1.976 1.057-1.976 2.192v4.286c0 .837.46 1.58 1.155 1.951m9.345-8.334V6.637c0-1.621-1.152-3.026-2.76-3.235A48.455 48.455 0 0011.25 3c-2.115 0-4.198.137-6.24.402-1.608.209-2.76 1.614-2.76 3.235v6.226c0 1.621 1.152 3.026 2.76 3.235.577.075 1.157.14 1.74.194V21l4.155-4.155" /></svg>
                 </div>
-                <h3 className="text-xl md:text-2xl font-serif text-white mb-2 md:mb-3">1-on-1 Coaching</h3>
+                <h3 className="text-xl md:text-2xl font-sans text-white mb-2 md:mb-3">1-on-1 Coaching</h3>
                 <p className="text-white/70 text-xs md:text-sm leading-relaxed">A dedicated coach guides you through every milestone—from credit improvement to mortgage qualification.</p>
               </div>
             </div>
@@ -370,7 +370,7 @@ export default function Walkthrough() {
           <div className="bg-[#00394a]/90 backdrop-blur-xl border border-medium-teal/30 rounded-2xl md:rounded-[40px] p-5 md:p-10 lg:p-14 w-full pointer-events-auto grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-12 items-center shadow-2xl max-h-[85dvh] overflow-y-auto">
             <div>
               <div className="anim-progress text-pathway-blue font-bold tracking-widest uppercase text-xs md:text-sm mb-2 md:mb-4">Track Progress</div>
-              <h2 className="anim-progress text-2xl sm:text-3xl md:text-5xl font-serif font-bold tracking-tighter mb-4 md:mb-6 text-white">Your homeownership plan, <br/><span className="italic text-pathway-blue">all in one place.</span></h2>
+              <h2 className="anim-progress text-2xl sm:text-3xl md:text-5xl font-sans font-bold tracking-tighter mb-4 md:mb-6 text-white">Your homeownership plan, <br/><span className="italic text-pathway-blue">all in one place.</span></h2>
               <p className="anim-progress text-sm md:text-lg text-white/80 font-light leading-relaxed">
                 A personalized dashboard tracks your milestones. Monitor credit score growth, tasks, and financing goals with your coach.
               </p>
@@ -391,7 +391,7 @@ export default function Walkthrough() {
             </div>
             
             <div className="anim-progress bg-white/5 border border-medium-teal/30 rounded-xl md:rounded-[25px] p-4 md:p-8 shadow-inner">
-              <h2 className="text-xl md:text-2xl font-serif font-bold tracking-tighter mb-4 md:mb-6 text-white">Buy when you're ready.</h2>
+              <h2 className="text-xl md:text-2xl font-sans font-bold tracking-tighter mb-4 md:mb-6 text-white">Buy when you're ready.</h2>
               <div className="space-y-3 md:space-y-4">
                 <div>
                   <h4 className="font-medium text-white text-sm md:text-base mb-1"><span className="text-pathway-blue mr-2" aria-hidden="true">✓</span><span className="sr-only">Included:</span>Fair market value pricing.</h4>
