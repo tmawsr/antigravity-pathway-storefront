@@ -58,7 +58,7 @@ export default function Header() {
       >
         <Link href="/" aria-label="Pathway home" className="mr-12 flex items-center gap-2.5 text-dark-teal">
           <LogoMark />
-          <span className="font-serif text-[20px] tracking-tight">Pathway</span>
+          <span className="font-wordmark text-[20px] tracking-tight">Pathway</span>
         </Link>
         <div className="flex items-center gap-1">
           <a
@@ -101,7 +101,7 @@ export default function Header() {
             onClick={closeMenu}
           >
             <LogoMark />
-            <span className="font-serif text-[18px] tracking-tight">Pathway</span>
+            <span className="font-wordmark text-[18px] tracking-tight">Pathway</span>
           </Link>
           <a
             href={APPLY_URL}

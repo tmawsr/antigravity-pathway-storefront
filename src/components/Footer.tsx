@@ -60,7 +60,7 @@ export default function Footer() {
       <div className="mx-auto max-w-7xl px-6 pt-12 pb-[110px] md:px-10 md:pt-16 md:pb-16">
         <div className="grid grid-cols-1 gap-10 border-b border-white/10 pb-10 md:grid-cols-[1.4fr_1fr_1fr_1fr] md:gap-12 md:pb-12">
           <div>
-            <Link href="/" className="mb-3 inline-block font-serif text-2xl text-white">
+            <Link href="/" className="mb-3 inline-block font-wordmark text-2xl text-white">
               Pathway
             </Link>
             <p className="mb-6 max-w-[280px] text-[15px] leading-relaxed text-white/60">
