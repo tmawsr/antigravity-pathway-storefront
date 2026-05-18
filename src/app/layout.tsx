@@ -36,7 +36,7 @@ export default function RootLayout({
       lang="en"
       className={`${dmSans.variable} ${dmSerif.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col font-sans bg-light-beige text-dark-teal pb-[84px] md:pb-0">
+      <body className="min-h-full flex flex-col font-sans bg-light-beige text-dark-teal">
         <LeadFormProvider>
           <Header />
           <main className="flex-1 flex flex-col">{children}</main>

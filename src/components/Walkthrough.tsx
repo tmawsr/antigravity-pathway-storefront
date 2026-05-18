@@ -162,7 +162,7 @@ export default function Walkthrough() {
           <div 
             key={index}
             ref={(el) => { layerRefs.current[index] = el; }}
-            className={`portal-layer-${index} absolute left-0 right-0 top-[12%] bottom-[12%] md:top-0 md:bottom-0 opacity-100 bg-dark-teal`}
+            className={`portal-layer-${index} absolute inset-0 opacity-100 bg-dark-teal`}
             style={{ 
               zIndex: 100 - index,
               willChange: 'transform, opacity'

@@ -54,7 +54,7 @@ export default function Header() {
       {/* Desktop header */}
       <nav
         aria-label="Primary"
-        className="hidden h-[72px] items-center rounded-2xl bg-white px-8 shadow-[0_1px_3px_rgba(0,57,74,0.06),0_0_0_1px_rgba(0,57,74,0.04)] md:flex"
+        className="hidden h-[72px] items-center rounded-2xl bg-white/75 px-8 shadow-[0_1px_3px_rgba(0,57,74,0.08),0_0_0_1px_rgba(0,57,74,0.06)] backdrop-blur-md md:flex"
       >
         <Link href="/" aria-label="Pathway home" className="mr-12 flex items-center gap-2.5 text-dark-teal">
           <LogoMark />
@@ -93,7 +93,7 @@ export default function Header() {
 
       {/* Mobile header */}
       <nav aria-label="Primary" className="relative md:hidden">
-        <div className="flex h-16 items-center rounded-[14px] bg-white px-4 shadow-[0_1px_3px_rgba(0,57,74,0.06),0_0_0_1px_rgba(0,57,74,0.04)]">
+        <div className="flex h-16 items-center rounded-[14px] bg-white/75 px-4 shadow-[0_1px_3px_rgba(0,57,74,0.08),0_0_0_1px_rgba(0,57,74,0.06)] backdrop-blur-md">
           <Link
             href="/"
             aria-label="Pathway home"

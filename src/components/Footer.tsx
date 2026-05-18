@@ -56,118 +56,120 @@ const SOCIALS = [
 
 export default function Footer() {
   return (
-    <footer className="mx-4 mb-4 rounded-2xl bg-dark-teal px-6 py-10 text-white md:mx-6 md:mb-6 md:px-10 md:py-12">
-      <div className="grid grid-cols-1 gap-10 border-b border-white/10 pb-10 md:grid-cols-[1.4fr_1fr_1fr_1fr]">
-        <div>
-          <Link href="/" className="mb-3 inline-block font-serif text-[22px] text-white">
-            Pathway
-          </Link>
-          <p className="mb-5 max-w-[260px] text-sm leading-relaxed text-white/55">
-            Rent to own, reimagined. Move in today, buy when you&apos;re ready.
-          </p>
-          <a href={PHONE_HREF} className="flex items-center gap-2 text-base font-semibold text-white">
-            <PhoneIcon className="h-4 w-4 opacity-60" />
-            {PHONE_DISPLAY}
-          </a>
-        </div>
-
-        <FooterColumn title="Markets">
-          {MARKETS.map((m) => (
-            <a
-              key={m.slug}
-              href={`${BROWSE_URL}?market=${m.slug}`}
-              className="block py-1 text-sm text-white/75 transition-colors hover:text-white"
-            >
-              {m.label}
-            </a>
-          ))}
-        </FooterColumn>
-
-        <FooterColumn title="Get started">
-          <a href={BROWSE_URL} className="block py-1 text-sm text-white/75 transition-colors hover:text-white">
-            Browse homes
-          </a>
-          <a href={APPLY_URL} className="block py-1 text-sm text-white/75 transition-colors hover:text-white">
-            Start or continue application
-          </a>
-          <Link href="/reviews" className="block py-1 text-sm text-white/75 transition-colors hover:text-white">
-            Reviews
-          </Link>
-          <a href={PHONE_HREF} className="block py-1 text-sm text-white/75 transition-colors hover:text-white">
-            Call us
-          </a>
-          <Link href="/partners" className="block py-1 text-sm text-white/75 transition-colors hover:text-white">
-            Partners
-          </Link>
-        </FooterColumn>
-
-        <FooterColumn title="Company">
-          <Link href="/about-us" className="block py-1 text-sm text-white/75 transition-colors hover:text-white">
-            About Pathway
-          </Link>
-          <a href={AGENTS_URL} className="block py-1 text-sm text-white/75 transition-colors hover:text-white">
-            Agents
-          </a>
-          <Link href="/blog" className="block py-1 text-sm text-white/75 transition-colors hover:text-white">
-            Blog
-          </Link>
-          <Link href="/careers" className="block py-1 text-sm text-white/75 transition-colors hover:text-white">
-            Careers
-          </Link>
-          <Link href="/contact" className="block py-1 text-sm text-white/75 transition-colors hover:text-white">
-            Contact us
-          </Link>
-          <Link href="/brokerage-licensing" className="block py-1 text-sm text-white/75 transition-colors hover:text-white">
-            Legal &amp; compliance
-          </Link>
-        </FooterColumn>
-      </div>
-
-      <div className="flex flex-col flex-wrap items-start justify-between gap-4 pt-6 md:flex-row md:items-center">
-        <div>
-          <p className="text-xs leading-relaxed text-white/35">
-            &copy; 2026 Resi Labs Pathway OpCo LP &middot;{' '}
-            <Link href="/terms-conditions" className="text-white/45 transition-colors hover:text-white/70">
-              Terms
-            </Link>{' '}
-            &middot;{' '}
-            <Link href="/privacy-policy" className="text-white/45 transition-colors hover:text-white/70">
-              Privacy
-            </Link>{' '}
-            &middot;{' '}
-            <Link href="/application-policy" className="text-white/45 transition-colors hover:text-white/70">
-              Application policy
-            </Link>{' '}
-            &middot;{' '}
-            <Link href="/brokerage-licensing" className="text-white/45 transition-colors hover:text-white/70">
-              Brokerage &amp; licensing
+    <footer className="bg-dark-teal text-white">
+      <div className="mx-auto max-w-7xl px-6 pt-12 pb-[110px] md:px-10 md:pt-16 md:pb-16">
+        <div className="grid grid-cols-1 gap-10 border-b border-white/10 pb-10 md:grid-cols-[1.4fr_1fr_1fr_1fr] md:gap-12 md:pb-12">
+          <div>
+            <Link href="/" className="mb-3 inline-block font-serif text-2xl text-white">
+              Pathway
             </Link>
-          </p>
-          <div className="mt-2 flex items-center gap-2 text-white/30">
-            <svg viewBox="0 0 24 24" className="h-5 w-5 fill-current" aria-hidden="true">
-              <path d="M12 2L1 12h3v10h16V12h3L12 2zm0 2.8L19 12v8H5v-8l7-7.2zM8 14h8v2H8v-2zm0-3h8v2H8v-2z" />
-            </svg>
-            <span className="text-[11px]">Equal Housing Opportunity</span>
+            <p className="mb-6 max-w-[280px] text-[15px] leading-relaxed text-white/60">
+              Rent to own, reimagined. Move in today, buy when you&apos;re ready.
+            </p>
+            <a href={PHONE_HREF} className="flex items-center gap-2 text-lg font-semibold text-white transition-colors hover:text-pathway-blue">
+              <PhoneIcon className="h-[18px] w-[18px] opacity-70" />
+              {PHONE_DISPLAY}
+            </a>
           </div>
+
+          <FooterColumn title="Markets">
+            {MARKETS.map((m) => (
+              <a
+                key={m.slug}
+                href={`${BROWSE_URL}?market=${m.slug}`}
+                className="block py-1.5 text-[15px] text-white/75 transition-colors hover:text-white"
+              >
+                {m.label}
+              </a>
+            ))}
+          </FooterColumn>
+
+          <FooterColumn title="Get started">
+            <a href={BROWSE_URL} className="block py-1.5 text-[15px] text-white/75 transition-colors hover:text-white">
+              Browse homes
+            </a>
+            <a href={APPLY_URL} className="block py-1.5 text-[15px] text-white/75 transition-colors hover:text-white">
+              Start or continue application
+            </a>
+            <Link href="/reviews" className="block py-1.5 text-[15px] text-white/75 transition-colors hover:text-white">
+              Reviews
+            </Link>
+            <a href={PHONE_HREF} className="block py-1.5 text-[15px] text-white/75 transition-colors hover:text-white">
+              Call us
+            </a>
+            <Link href="/partners" className="block py-1.5 text-[15px] text-white/75 transition-colors hover:text-white">
+              Partners
+            </Link>
+          </FooterColumn>
+
+          <FooterColumn title="Company">
+            <Link href="/about-us" className="block py-1.5 text-[15px] text-white/75 transition-colors hover:text-white">
+              About Pathway
+            </Link>
+            <a href={AGENTS_URL} className="block py-1.5 text-[15px] text-white/75 transition-colors hover:text-white">
+              Agents
+            </a>
+            <Link href="/blog" className="block py-1.5 text-[15px] text-white/75 transition-colors hover:text-white">
+              Blog
+            </Link>
+            <Link href="/careers" className="block py-1.5 text-[15px] text-white/75 transition-colors hover:text-white">
+              Careers
+            </Link>
+            <Link href="/contact" className="block py-1.5 text-[15px] text-white/75 transition-colors hover:text-white">
+              Contact us
+            </Link>
+            <Link href="/brokerage-licensing" className="block py-1.5 text-[15px] text-white/75 transition-colors hover:text-white">
+              Legal &amp; compliance
+            </Link>
+          </FooterColumn>
         </div>
 
-        <ul className="flex gap-2" aria-label="Social media">
-          {SOCIALS.map((s) => (
-            <li key={s.name}>
-              <a
-                href={s.href}
-                aria-label={s.name}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="flex h-8 w-8 items-center justify-center rounded-lg bg-white/8 transition-colors hover:bg-white/15"
-              >
-                <svg viewBox="0 0 24 24" className="h-3.5 w-3.5 fill-white/60" aria-hidden="true">
-                  <path d={s.path} />
-                </svg>
-              </a>
-            </li>
-          ))}
-        </ul>
+        <div className="flex flex-col flex-wrap items-start justify-between gap-6 pt-8 md:flex-row md:items-center">
+          <div>
+            <p className="text-[13px] leading-relaxed text-white/45">
+              &copy; 2026 Resi Labs Pathway OpCo LP &middot;{' '}
+              <Link href="/terms-conditions" className="text-white/55 transition-colors hover:text-white/80">
+                Terms
+              </Link>{' '}
+              &middot;{' '}
+              <Link href="/privacy-policy" className="text-white/55 transition-colors hover:text-white/80">
+                Privacy
+              </Link>{' '}
+              &middot;{' '}
+              <Link href="/application-policy" className="text-white/55 transition-colors hover:text-white/80">
+                Application policy
+              </Link>{' '}
+              &middot;{' '}
+              <Link href="/brokerage-licensing" className="text-white/55 transition-colors hover:text-white/80">
+                Brokerage &amp; licensing
+              </Link>
+            </p>
+            <div className="mt-3 flex items-center gap-2 text-white/35">
+              <svg viewBox="0 0 24 24" className="h-5 w-5 fill-current" aria-hidden="true">
+                <path d="M12 2L1 12h3v10h16V12h3L12 2zm0 2.8L19 12v8H5v-8l7-7.2zM8 14h8v2H8v-2zm0-3h8v2H8v-2z" />
+              </svg>
+              <span className="text-[12px]">Equal Housing Opportunity</span>
+            </div>
+          </div>
+
+          <ul className="flex gap-2" aria-label="Social media">
+            {SOCIALS.map((s) => (
+              <li key={s.name}>
+                <a
+                  href={s.href}
+                  aria-label={s.name}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="flex h-9 w-9 items-center justify-center rounded-lg bg-white/8 transition-colors hover:bg-white/15"
+                >
+                  <svg viewBox="0 0 24 24" className="h-4 w-4 fill-white/65" aria-hidden="true">
+                    <path d={s.path} />
+                  </svg>
+                </a>
+              </li>
+            ))}
+          </ul>
+        </div>
       </div>
     </footer>
   );
@@ -176,7 +178,7 @@ export default function Footer() {
 function FooterColumn({ title, children }: { title: string; children: React.ReactNode }) {
   return (
     <div>
-      <h4 className="mb-4 text-[11px] font-bold uppercase tracking-[1.2px] text-white/40">
+      <h4 className="mb-4 text-[12px] font-bold uppercase tracking-[1.4px] text-white/45">
         {title}
       </h4>
       {children}
