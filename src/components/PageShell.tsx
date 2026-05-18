@@ -9,8 +9,8 @@ interface PageShellProps {
 
 export default function PageShell({ eyebrow, title, description, children }: PageShellProps) {
   return (
-    <article className="flex flex-1 flex-col bg-light-beige px-4 md:px-6">
-      <header className="mx-auto w-full max-w-5xl pt-10 pb-8 md:pt-20 md:pb-12">
+    <article className="flex flex-1 flex-col bg-light-beige px-4 pt-20 md:px-6 md:pt-24">
+      <header className="mx-auto w-full max-w-5xl pt-6 pb-8 md:pt-12 md:pb-12">
         {eyebrow && (
           <p className="mb-3 text-xs font-bold uppercase tracking-[1.5px] text-pathway-blue md:mb-4 md:text-sm">
             {eyebrow}

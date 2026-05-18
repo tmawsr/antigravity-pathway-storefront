@@ -50,7 +50,7 @@ export default function Header() {
   const closeMenu = () => setOpen(false);
 
   return (
-    <header className="sticky top-0 z-50 px-4 pt-4 md:px-6 md:pt-6">
+    <header className="fixed inset-x-0 top-0 z-[200] px-4 pt-4 md:px-6 md:pt-6">
       {/* Desktop header */}
       <nav
         aria-label="Primary"
