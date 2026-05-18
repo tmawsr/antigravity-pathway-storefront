@@ -3,6 +3,9 @@ import { DM_Sans, DM_Serif_Display } from "next/font/google";
 import "./globals.css";
 import { LeadFormProvider } from '@/components/LeadFormContext';
 import LeadFormModal from '@/components/LeadFormModal';
+import Header from '@/components/Header';
+import Footer from '@/components/Footer';
+import StickyMobileBar from '@/components/StickyMobileBar';
 
 const dmSans = DM_Sans({
   subsets: ["latin"],
@@ -33,9 +36,12 @@ export default function RootLayout({
       lang="en"
       className={`${dmSans.variable} ${dmSerif.variable} h-full antialiased`}
     >
-      <body className="min-h-full flex flex-col font-sans bg-light-beige text-dark-teal">
+      <body className="min-h-full flex flex-col font-sans bg-light-beige text-dark-teal pb-[84px] md:pb-0">
         <LeadFormProvider>
-          {children}
+          <Header />
+          <main className="flex-1 flex flex-col">{children}</main>
+          <Footer />
+          <StickyMobileBar />
           <LeadFormModal />
         </LeadFormProvider>
       </body>
