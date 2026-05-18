@@ -168,13 +168,15 @@ export default function Walkthrough() {
               willChange: 'transform, opacity'
             }}
           >
-            <Image 
-               src={url}
-               alt={`Architectural Environment Layer ${index}`}
-               fill
-               priority={index === 0}
-               className="object-cover object-center md:object-bottom"
-               sizes="100vw"
+            <Image
+              src={url}
+              alt=""
+              fill
+              priority={index === 0}
+              loading={index === 0 ? undefined : 'eager'}
+              quality={70}
+              className="object-cover object-center md:object-bottom"
+              sizes="(max-width: 768px) 100vw, (max-width: 1280px) 100vw, 1920px"
             />
           </div>
         ))}

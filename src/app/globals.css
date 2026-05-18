@@ -31,8 +31,10 @@
   --color-border-light: rgba(0, 79, 104, 0.12);
 }
 
-/* Global Styles — overflow override prevents GSAP ScrollTrigger's fixed pin from locking body scroll */
-html, body {
+/* Global Styles — overflow override prevents GSAP ScrollTrigger's fixed pin
+   from locking the document scroll. Applied only to html; body must remain
+   overflow: visible so the sticky <Header> can stick to the viewport top. */
+html {
   overflow: auto !important;
   overflow-y: auto !important;
 }
