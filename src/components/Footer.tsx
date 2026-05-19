@@ -77,6 +77,8 @@ export default function Footer() {
               <a
                 key={m.slug}
                 href={`${BROWSE_URL}?market=${m.slug}`}
+                target="_blank"
+                rel="noopener noreferrer"
                 className="block py-1.5 text-[15px] text-white/75 transition-colors hover:text-white"
               >
                 {m.label}
@@ -85,10 +87,10 @@ export default function Footer() {
           </FooterColumn>
 
           <FooterColumn title="Get started">
-            <a href={BROWSE_URL} className="block py-1.5 text-[15px] text-white/75 transition-colors hover:text-white">
+            <a href={BROWSE_URL} target="_blank" rel="noopener noreferrer" className="block py-1.5 text-[15px] text-white/75 transition-colors hover:text-white">
               Browse homes
             </a>
-            <a href={APPLY_URL} className="block py-1.5 text-[15px] text-white/75 transition-colors hover:text-white">
+            <a href={APPLY_URL} target="_blank" rel="noopener noreferrer" className="block py-1.5 text-[15px] text-white/75 transition-colors hover:text-white">
               Start or continue application
             </a>
             <Link href="/reviews" className="block py-1.5 text-[15px] text-white/75 transition-colors hover:text-white">
@@ -106,7 +108,7 @@ export default function Footer() {
             <Link href="/about-us" className="block py-1.5 text-[15px] text-white/75 transition-colors hover:text-white">
               About Pathway
             </Link>
-            <a href={AGENTS_URL} className="block py-1.5 text-[15px] text-white/75 transition-colors hover:text-white">
+            <a href={AGENTS_URL} target="_blank" rel="noopener noreferrer" className="block py-1.5 text-[15px] text-white/75 transition-colors hover:text-white">
               Agents
             </a>
             <Link href="/blog" className="block py-1.5 text-[15px] text-white/75 transition-colors hover:text-white">

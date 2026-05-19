@@ -69,6 +69,14 @@ html {
   border-width: 0;
 }
 
+/* Keyboard focus ring for interactive elements. :where() keeps specificity
+   at 0 so component-level focus styles can still override when needed. */
+:where(a, button, [role="button"], input, select, textarea):focus-visible {
+  outline: 2px solid var(--color-pathway-blue);
+  outline-offset: 2px;
+  border-radius: 6px;
+}
+
 /* Lead form modal entrance animation */
 @keyframes modal-in {
   from {

@@ -37,9 +37,15 @@ export default function RootLayout({
       className={`${dmSans.variable} ${dmSerif.variable} h-full antialiased`}
     >
       <body className="min-h-full flex flex-col font-sans bg-light-beige text-dark-teal">
+        <a
+          href="#main-content"
+          className="sr-only focus:not-sr-only focus:fixed focus:left-4 focus:top-4 focus:z-[300] focus:rounded-lg focus:bg-dark-teal focus:px-4 focus:py-2 focus:text-sm focus:font-semibold focus:text-white focus:outline-2 focus:outline-offset-2 focus:outline-pathway-blue"
+        >
+          Skip to main content
+        </a>
         <LeadFormProvider>
           <Header />
-          <main className="flex-1 flex flex-col">{children}</main>
+          <main id="main-content" className="flex-1 flex flex-col">{children}</main>
           <Footer />
           <StickyMobileBar />
           <LeadFormModal />

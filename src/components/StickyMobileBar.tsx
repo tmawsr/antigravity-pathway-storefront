@@ -29,6 +29,8 @@ export default function StickyMobileBar() {
         </a>
         <a
           href={APPLY_URL}
+          target="_blank"
+          rel="noopener noreferrer"
           className="whitespace-nowrap rounded-[10px] bg-white px-5 py-2.5 text-[13px] font-bold text-dark-teal transition-colors hover:bg-light-slate"
         >
           Apply

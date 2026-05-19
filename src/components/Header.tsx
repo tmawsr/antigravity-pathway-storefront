@@ -1,12 +1,17 @@
 "use client";
 
 import Link from 'next/link';
-import { useEffect, useState } from 'react';
+import { useEffect, useRef, useState } from 'react';
 
 const PHONE_DISPLAY = "(877) 958-1888";
 const PHONE_HREF = "tel:+18779581888";
 const BROWSE_URL = "https://www.yourpathway.com/listing-search";
 const APPLY_URL = "https://www.yourpathway.com/apply";
+
+const EXTERNAL_LINK_ATTRS = {
+  target: "_blank",
+  rel: "noopener noreferrer",
+} as const;
 
 function LogoMark() {
   return (
@@ -37,14 +42,22 @@ function PhoneIcon({ className }: { className?: string }) {
 
 export default function Header() {
   const [open, setOpen] = useState(false);
+  const mobileNavRef = useRef<HTMLElement>(null);
 
   useEffect(() => {
     if (!open) return;
     const onKey = (e: KeyboardEvent) => {
       if (e.key === 'Escape') setOpen(false);
     };
+    const onPointerDown = (e: PointerEvent) => {
+      if (!mobileNavRef.current?.contains(e.target as Node)) setOpen(false);
+    };
     window.addEventListener('keydown', onKey);
-    return () => window.removeEventListener('keydown', onKey);
+    window.addEventListener('pointerdown', onPointerDown);
+    return () => {
+      window.removeEventListener('keydown', onKey);
+      window.removeEventListener('pointerdown', onPointerDown);
+    };
   }, [open]);
 
   const closeMenu = () => setOpen(false);
@@ -63,6 +76,7 @@ export default function Header() {
         <div className="flex items-center gap-1">
           <a
             href={BROWSE_URL}
+            {...EXTERNAL_LINK_ATTRS}
             className="rounded-[10px] px-4 py-2 text-[15px] font-medium text-medium-teal transition-colors hover:bg-light-slate hover:text-dark-teal"
           >
             Browse Homes
@@ -84,6 +98,7 @@ export default function Header() {
           </a>
           <a
             href={APPLY_URL}
+            {...EXTERNAL_LINK_ATTRS}
             className="rounded-xl bg-dark-teal px-6 py-2.5 text-sm font-bold text-white transition-colors hover:bg-medium-teal"
           >
             Apply
@@ -92,7 +107,7 @@ export default function Header() {
       </nav>
 
       {/* Mobile header */}
-      <nav aria-label="Primary" className="relative md:hidden">
+      <nav ref={mobileNavRef} aria-label="Primary" className="relative md:hidden">
         <div className="flex h-16 items-center rounded-[14px] bg-white/75 px-4 shadow-[0_1px_3px_rgba(0,57,74,0.08),0_0_0_1px_rgba(0,57,74,0.06)] backdrop-blur-md">
           <Link
             href="/"
@@ -105,6 +120,7 @@ export default function Header() {
           </Link>
           <a
             href={APPLY_URL}
+            {...EXTERNAL_LINK_ATTRS}
             className="mr-2 rounded-[10px] bg-dark-teal px-3.5 py-2 text-[13px] font-bold text-white"
           >
             Apply
@@ -142,6 +158,7 @@ export default function Header() {
           >
             <a
               href={BROWSE_URL}
+              {...EXTERNAL_LINK_ATTRS}
               onClick={closeMenu}
               className="rounded-[10px] px-4 py-3 text-[15px] font-medium text-medium-teal transition-colors hover:bg-light-slate hover:text-dark-teal"
             >
