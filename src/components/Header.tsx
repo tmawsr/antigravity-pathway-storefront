@@ -5,7 +5,7 @@ import { useEffect, useRef, useState } from 'react';
 
 const PHONE_DISPLAY = "(877) 958-1888";
 const PHONE_HREF = "tel:+18779581888";
-const BROWSE_URL = "https://www.yourpathway.com/listing-search";
+const BROWSE_PATH = "/browse-homes";
 const APPLY_URL = "https://www.yourpathway.com/apply";
 
 const EXTERNAL_LINK_ATTRS = {
@@ -74,13 +74,12 @@ export default function Header() {
           <span className="font-wordmark text-[20px] tracking-tight">Pathway</span>
         </Link>
         <div className="flex items-center gap-1">
-          <a
-            href={BROWSE_URL}
-            {...EXTERNAL_LINK_ATTRS}
+          <Link
+            href={BROWSE_PATH}
             className="rounded-[10px] px-4 py-2 text-[15px] font-medium text-medium-teal transition-colors hover:bg-light-slate hover:text-dark-teal"
           >
             Browse Homes
-          </a>
+          </Link>
           <Link
             href="/reviews"
             className="rounded-[10px] px-4 py-2 text-[15px] font-medium text-medium-teal transition-colors hover:bg-light-slate hover:text-dark-teal"
@@ -156,14 +155,13 @@ export default function Header() {
             id="mobile-nav-panel"
             className="absolute inset-x-0 top-[72px] flex flex-col gap-1 rounded-[14px] bg-white p-3 shadow-[0_8px_24px_rgba(0,57,74,0.16),0_0_0_1px_rgba(0,57,74,0.04)]"
           >
-            <a
-              href={BROWSE_URL}
-              {...EXTERNAL_LINK_ATTRS}
+            <Link
+              href={BROWSE_PATH}
               onClick={closeMenu}
               className="rounded-[10px] px-4 py-3 text-[15px] font-medium text-medium-teal transition-colors hover:bg-light-slate hover:text-dark-teal"
             >
               Browse Homes
-            </a>
+            </Link>
             <Link
               href="/reviews"
               onClick={closeMenu}

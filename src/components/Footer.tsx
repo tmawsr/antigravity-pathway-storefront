@@ -2,16 +2,16 @@ import Link from 'next/link';
 
 const PHONE_DISPLAY = "(877) 958-1888";
 const PHONE_HREF = "tel:+18779581888";
-const BROWSE_URL = "https://www.yourpathway.com/listing-search";
+const BROWSE_PATH = "/browse-homes";
 const APPLY_URL = "https://www.yourpathway.com/apply";
 const AGENTS_URL = "https://www.yourpathway.com/agents";
 
 const MARKETS = [
-  { label: 'Dallas-Fort Worth, TX', slug: 'dallas' },
-  { label: 'Denver, CO', slug: 'denver' },
-  { label: 'Charlotte, NC', slug: 'charlotte' },
-  { label: 'Nashville, TN', slug: 'nashville' },
-  { label: 'Atlanta, GA', slug: 'atlanta' },
+  { label: 'Dallas-Fort Worth, TX', slug: 'dallas-fort-worth-tx' },
+  { label: 'Denver, CO', slug: 'denver-co' },
+  { label: 'Charlotte, NC', slug: 'charlotte-nc' },
+  { label: 'Nashville, TN', slug: 'nashville-tn' },
+  { label: 'Atlanta, GA', slug: 'atlanta-ga' },
 ];
 
 function PhoneIcon({ className }: { className?: string }) {
@@ -74,22 +74,20 @@ export default function Footer() {
 
           <FooterColumn title="Markets">
             {MARKETS.map((m) => (
-              <a
+              <Link
                 key={m.slug}
-                href={`${BROWSE_URL}?market=${m.slug}`}
-                target="_blank"
-                rel="noopener noreferrer"
+                href={`${BROWSE_PATH}/markets/${m.slug}`}
                 className="block py-1.5 text-[15px] text-white/75 transition-colors hover:text-white"
               >
                 {m.label}
-              </a>
+              </Link>
             ))}
           </FooterColumn>
 
           <FooterColumn title="Get started">
-            <a href={BROWSE_URL} target="_blank" rel="noopener noreferrer" className="block py-1.5 text-[15px] text-white/75 transition-colors hover:text-white">
+            <Link href={BROWSE_PATH} className="block py-1.5 text-[15px] text-white/75 transition-colors hover:text-white">
               Browse homes
-            </a>
+            </Link>
             <a href={APPLY_URL} target="_blank" rel="noopener noreferrer" className="block py-1.5 text-[15px] text-white/75 transition-colors hover:text-white">
               Start or continue application
             </a>
