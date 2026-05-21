@@ -1,5 +1,5 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
-  devIndicators: false
+    devIndicators: false,
 };
 export default nextConfig;
