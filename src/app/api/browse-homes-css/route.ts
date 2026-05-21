@@ -1,5 +1,5 @@
 const REMOTE_ASSET_ORIGIN =
-    process.env.NEXT_PUBLIC_BROWSE_HOMES_ASSET_ORIGIN || "https://new-pathway-dev.d36b42kego3ml9.amplifyapp.com";
+    process.env.NEXT_PUBLIC_BROWSE_HOMES_ASSET_ORIGIN || "https://main.d4rwkr9dnusc5.amplifyapp.com";
 const SCOPE_SELECTOR = ".pathway-browse-homes-scope";
 const ACTIVE_BODY_SELECTOR = "body.pathway-browse-homes-active";
 
